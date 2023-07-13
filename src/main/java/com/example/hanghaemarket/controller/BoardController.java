@@ -34,7 +34,7 @@ public class BoardController {
     //<게시글 상세조회>
 
     @GetMapping("/post/{id}")
-    public ResponseDto getBoard(@PathVariable("id") Long id){
+    public ResponseDto getBoardById(@PathVariable("id") Long id){
         return boardService.getBoardById(id);
     }
 
@@ -42,13 +42,13 @@ public class BoardController {
 
     @PutMapping("/post/{id}")
     public ResponseDto updateBoard(@PathVariable("id") Long id, @RequestBody RequestDto requestDto){
-        return BoardService.updateBoard(id, requestDto);
+        return boardService.updateBoard(id, requestDto);
     }
 
     //<게시글 삭제>
     @DeleteMapping("/post/{id}")
     public String deleteBoard(@PathVariable("id") Long id, @RequestBody RequestDto requestDto){
-        return BoardService.deleteBoard(id, requestDto);
+        return boardService.deleteBoard(id, requestDto);
     }
 
 }
