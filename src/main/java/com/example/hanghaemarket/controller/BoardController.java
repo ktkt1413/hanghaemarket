@@ -47,8 +47,8 @@ public class BoardController {
 
     //<게시글 삭제>
     @DeleteMapping("/post/{id}")
-    public String deleteBoard(@PathVariable("id") Long id, @RequestBody RequestDto requestDto){
-        return boardService.deleteBoard(id, requestDto);
+    public String deleteBoard(@PathVariable("id") Long id){
+        return boardService.deleteBoard(id);
     }
 
 }

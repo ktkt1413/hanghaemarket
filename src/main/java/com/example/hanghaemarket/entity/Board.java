@@ -2,14 +2,12 @@ package com.example.hanghaemarket.entity;
 
 import com.example.hanghaemarket.dto.RequestDto;
 import jakarta.persistence.*;
-import lombok.Generated;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Entity
 @Getter
-@Setter
+@Table(name="board")
 @NoArgsConstructor
 public class Board {
     @Id
