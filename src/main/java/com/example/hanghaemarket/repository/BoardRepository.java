@@ -1,4 +1,6 @@
 package com.example.hanghaemarket.repository;
 
-public class BoardRepository {
-}
+import java.util.List;
+public interface BoardRepository extends JpaRepository<Board, Long>{
+//    List<Board> findAllByOrderByCreatedAtDesc();
+        }
